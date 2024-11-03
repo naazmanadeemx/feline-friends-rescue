@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt a Cat - Feline Friends Rescue</title>
+    <meta name="description" content="Adopt a cat from Feline Friends Rescue. Find your new furry companion and provide a loving home to a cat in need.">
+    <meta name="keywords" content="cat adoption, adopt a cat, pet adoption, Feline Friends Rescue, rescue cats, rehome cats">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .cat-card {
+            flex: 1 1 calc(33.333% - 40px);
+            max-width: calc(33.333% - 40px);
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .cat-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/logo22.png" alt="Feline Friends Rescue Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="adopt.html">Adopt</a></li>
+                <li><a href="donate.html">Donate/Volunteer</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Adopt a Cat</h1>
+        <p>Looking to add a new member to your family? Meet our adorable cats who are ready for adoption!</p>
+        <div class="gallery">
+            <div class="cat-card">
+                <img src="images/cat1.jpg" alt="Fluffy, a 2-year-old playful and loving cat">
+                <p><strong>Fluffy</strong> - 2 years old, playful and loving.</p>
+            </div>
+            <div class="cat-card">
+                <img src="images/cat2.jpg" alt="Whiskers, a 3-year-old cat who loves cuddles">
+                <p><strong>Whiskers</strong> - 3 years old, loves cuddles.</p>
+            </div>
+            <div class="cat-card">
+                <img src="images/cat3.jpg" alt="Mittens, a 1-year-old curious and adventurous cat">
+                <p><strong>Mittens</strong> - 1 year old, curious and adventurous.</p>
+            </div>
+            <div class="cat-card">
+                <img src="images/cat4.jpg" alt="Shadow, a 4-year-old calm and friendly cat">
+                <p><strong>Shadow</strong> - 4 years old, calm and friendly.</p>
+            </div>
+            <div class="cat-card">
+                <img src="images/cat5.jpg" alt="Bella, a 3-year-old affectionate and gentle cat">
+                <p><strong>Bella</strong> - 3 years old, affectionate and gentle.</p>
+            </div>
+            <div class="cat-card">
+                <img src="images/cat6.jpg" alt="Tiger, a 2-year-old energetic and playful cat">
+                <p><strong>Tiger</strong> - 2 years old, energetic and playful.</p>
+            </div>
+        </div>
+        <h2>How to Adopt</h2>
+        <p>The adoption process is simple. Just follow these steps:</p>
+        <ol>
+            <li>Visit our shelter or check out our online gallery.</li>
+            <li>Choose the cat you’d like to adopt.</li>
+            <li>Complete the adoption application form.</li>
+            <li>Schedule a home visit with our team.</li>
+            <li>Bring your new friend home!</li>
+        </ol>
+        <p>For more information, contact us or visit our shelter during operating hours.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Feline Friends Rescue. All rights reserved.</p>
+        <p id="date"></p>
+    </footer>
+    
+    <script>
+        // JavaScript to add a live date stamp
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const dateElement = document.getElementById('date');
+            const currentDate = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            dateElement.textContent = `Today's Date: ${currentDate.toLocaleDateString('en-US', options)}`;
+        });
+    </script>
+</body>
+</html>

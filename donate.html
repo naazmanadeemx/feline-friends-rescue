@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate or Volunteer - Feline Friends Rescue</title>
+    <meta name="description" content="Support Feline Friends Rescue by donating or volunteering. Help us provide care for rescued cats and make a difference today.">
+    <meta name="keywords" content="donate, volunteer, Feline Friends Rescue, cat care, help cats, cat rescue, support shelter">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <img src="images/logo22.png" alt="Feline Friends Rescue Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="adopt.html">Adopt</a></li>
+                    <li><a href="donate.html">Donate/Volunteer</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="donate-volunteer-page">
+            <h1>Donate or Volunteer</h1>
+            
+            <!-- Donate Section -->
+            <div class="donate-section">
+                <h2>Donate</h2>
+                <form action="/submit-donation" method="POST">
+                    <label for="donation-amount">Donation Amount:</label>
+                    <input type="number" id="donation-amount" name="donation-amount" placeholder="Enter amount" required>
+                    
+                    <label for="donation-type">Donation Type:</label>
+                    <select id="donation-type" name="donation-type">
+                        <option value="one-time">One-Time</option>
+                        <option value="recurring">Recurring</option>
+                    </select>
+                    
+                    <button type="submit" class="donate-button">Donate Now</button>
+                </form>
+            </div>
+            
+            <!-- Volunteer Section -->
+            <div class="volunteer-section">
+                <h2>Volunteer</h2>
+                <form action="/submit-volunteer" method="POST">
+                    <label for="volunteer-name">Full Name:</label>
+                    <input type="text" id="volunteer-name" name="volunteer-name" placeholder="Your Name" required>
+                    
+                    <label for="volunteer-email">Email Address:</label>
+                    <input type="email" id="volunteer-email" name="volunteer-email" placeholder="Your Email" required>
+                    
+                    <label for="volunteer-activity">Volunteer Activity:</label>
+                    <select id="volunteer-activity" name="volunteer-activity">
+                        <option value="cat-care">Cat Care</option>
+                        <option value="event-help">Event Help</option>
+                        <option value="fundraising">Fundraising</option>
+                    </select>
+                    
+                    <button type="submit" class="volunteer-button">Sign Up to Volunteer</button>
+                </form>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Feline Friends Rescue. All rights reserved.</p>
+            <p id="date"></p>
+        </footer>
+        
+        <script>
+            // JavaScript to add a live date stamp
+            document.addEventListener('DOMContentLoaded', (event) => {
+                const dateElement = document.getElementById('date');
+                const currentDate = new Date();
+                const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                dateElement.textContent = `Today's Date: ${currentDate.toLocaleDateString('en-US', options)}`;
+            });
+        </script>
+</body>
+</html>

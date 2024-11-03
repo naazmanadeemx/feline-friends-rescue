@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Feline Friends Rescue</title>
+    <meta name="description" content="Feline Friends Rescue - Saving cats and providing them with loving homes. Adopt, donate, or volunteer to help make a difference.">
+    <meta name="keywords" content="cat rescue, adoption, volunteer, donate, Feline Friends, cat shelter, pet adoption">
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <header>
+        <img src="images/logo22.png" alt="Feline Friends Rescue Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="adopt.html">Adopt</a></li>
+                <li><a href="donate.html">Donate/Volunteer</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Welcome Section -->
+        <h1>Welcome to Feline Friends Rescue</h1>
+        <h2>Saving Lives, One Cat at a Time</h2>
+        <figure>
+            <img src="images/homepage.jpg" alt="A happy rescued cat relaxing" width="500" height="330">
+        </figure>
+
+        <!-- Mission Statement -->
+        <section>
+            <h2>Our Mission</h2>
+            <p>Our mission at Feline Friends Rescue is to provide loving, lifelong homes for cats in need. We strive to ensure every cat gets a second chance at life through compassionate care and responsible adoption.</p>
+        </section>
+
+        <!-- Success Stories Section -->
+        <section>
+            <h2>Success Stories</h2>
+            <p>"Adopting from Feline Friends was one of the best decisions. My cat Fluffy has brought so much joy to my life!" - Sarah J.</p>
+            <p>"The care and love they show these cats is truly inspiring. I highly recommend Feline Friends Rescue." - Michael T.</p>
+        </section>
+
+        <!-- Image with Success Story -->
+        <section>
+            <h3>Fluffy's Story</h3>
+            <figure>
+                <img src="images/cat1.jpg" alt="Fluffy, a rescued cat now adopted and living happily" class="image-small" width="250" height="300">
+            </figure>
+            <p>Fluffy was rescued from a tough environment and is now thriving in her forever home. Stories like Fluffy's inspire us to continue our mission of rescuing and rehoming cats.</p>
+        </section>
+
+        <!-- Upcoming Events Section -->
+        <section class="events-section">
+            <h2>Upcoming Events</h2>
+            <ul>
+                <li><strong>Adoption Day:</strong> October 15th, 2024 - Meet our lovely cats ready for adoption.</li>
+                <li><strong>Fundraiser:</strong> November 1st, 2024 - Help us raise funds to care for our rescues.</li>
+            </ul>
+        </section>
+
+        <!-- Modal for Volunteering -->
+        <div id="volunteerModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Become a Volunteer</h2>
+                <p>Join us in making a difference in the lives of cats in need. Please fill in the form below to express your interest in volunteering with Feline Friends Rescue.</p>
+                <form>
+                    <label for="volunteer-name">Full Name:</label>
+                    <input type="text" id="volunteer-name" name="volunteer-name" required>
+                    <label for="volunteer-email">Email:</label>
+                    <input type="email" id="volunteer-email" name="volunteer-email" required>
+                    <button type="submit" class="button">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Google Form for Newsletter -->
+        <section class="newsletter-signup">
+            <h2>Receive Our Newsletter</h2>
+            <p>Sign up for our newsletter to stay updated on our rescues, upcoming events, and adoption stories.</p>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfK9GDsz2zopd4VB6BNUeOaH4wNdduiATrAcVvLvReNgctUxA/viewform?embedded=true" width="100%" height="662" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </section>
+
+    </main>
+
+    <!-- Floating Button -->
+    <button id="volunteerBtn" class="floating-button">Make a Difference: Volunteer Today!</button>
+
+    <footer>
+        <p>&copy; 2024 Feline Friends Rescue. All rights reserved.</p>
+        <p id="date"></p>
+    </footer>
+
+    <script>
+        // JavaScript to add a live date stamp
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const dateElement = document.getElementById('date');
+            const currentDate = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            dateElement.textContent = `Today's Date: ${currentDate.toLocaleDateString('en-US', options)}`;
+        });
+
+        // JavaScript to control the volunteer modal
+        var modal = document.getElementById("volunteerModal");
+        var btn = document.getElementById("volunteerBtn");
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

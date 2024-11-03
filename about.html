@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Feline Friends Rescue</title>
+    <meta name="description" content="Learn more about Feline Friends Rescue - our mission, our team, and our dedication to rescuing, rehabilitating, and rehoming cats in need.">
+    <meta name="keywords" content="Feline Friends Rescue, cat rescue, about us, rehoming cats, cat shelter, rescue cats">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <img src="images/logo22.png" alt="Feline Friends Rescue Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="adopt.html">Adopt</a></li>
+                    <li><a href="donate.html">Donate/Volunteer</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h1>About Feline Friends Rescue</h1>
+            <p>Founded in 2024, Feline Friends Rescue has been a haven for cats in need. Our organization is committed to rescuing, rehabilitating, and rehoming cats who have been abandoned or mistreated.</p>
+            <p>Our team of dedicated volunteers works tirelessly to provide the best care possible for these animals, ensuring they find the loving homes they deserve.</p>
+            <img src="images/ourteam.jpg" alt="Feline Friends Rescue team working together to care for cats in need">
+            <p>We are proud of the impact we've made in our community and look forward to continuing our mission for years to come.</p>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Feline Friends Rescue. All rights reserved.</p>
+        <p id="date"></p>
+    </footer>
+
+    <script>
+        // JavaScript to add a live date stamp
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const dateElement = document.getElementById('date');
+            const currentDate = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            dateElement.textContent = `Today's Date: ${currentDate.toLocaleDateString('en-US', options)}`;
+        });
+    </script>
+
+</body>
+</html>
